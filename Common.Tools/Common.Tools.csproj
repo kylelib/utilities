@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9846DFF4-BFEF-49D8-AD88-0C2BA7466540}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Tools</RootNamespace>
+    <AssemblyName>Common.Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arrays\ArrayHelper.cs" />
+    <Compile Include="Cache\CacheHelper.cs" />
+    <Compile Include="Cache\RequestCache.cs" />
+    <Compile Include="Configuration\ConfigHelper.cs" />
+    <Compile Include="Configuration\ConfigSettings.cs" />
+    <Compile Include="Configuration\ConfigSettingsBase.cs" />
+    <Compile Include="Configuration\IqWebConfigSettings.cs" />
+    <Compile Include="Configuration\WcmServiceConfigSettings.cs" />
+    <Compile Include="Dates\DateExtensions.cs" />
+    <Compile Include="Dates\DateHelper.cs" />
+    <Compile Include="Enums\EnumExtension.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="IO\ImpersonateUser.cs" />
+    <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Logging\ErrorEvent.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\ILoggerFactory.cs" />
+    <Compile Include="Logging\IWcfServiceLogger.cs" />
+    <Compile Include="Logging\IWebAppLogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\PerformanceEvent.cs" />
+    <Compile Include="Logging\Util\ErrorEventDbUtil.cs" />
+    <Compile Include="Logging\Util\ExceptionUtil.cs" />
+    <Compile Include="Logging\Util\PerformanceEventDbUtil.cs" />
+    <Compile Include="Logging\Util\SystemEventLoggingUtil.cs" />
+    <Compile Include="Logging\WcfServiceLogger.cs" />
+    <Compile Include="Logging\WebAppLogger.cs" />
+    <Compile Include="Mail\MailHelper.cs" />
+    <Compile Include="Media\ImageHelper.cs" />
+    <Compile Include="Numbers\MathHelper.cs" />
+    <Compile Include="Numbers\NumberExtensions.cs" />
+    <Compile Include="Object\ObjectHelper.cs" />
+    <Compile Include="Object\ReflectionHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings\DateFormat.cs" />
+    <Compile Include="Strings\KeyWordBuilder.cs" />
+    <Compile Include="Strings\RandomWordBuilder.cs" />
+    <Compile Include="Strings\StringEnum.cs" />
+    <Compile Include="Strings\StringExtension.cs" />
+    <Compile Include="Strings\StringHelper.cs" />
+    <Compile Include="Web\HtmlHelper.cs" />
+    <Compile Include="Web\ListItemHelper.cs" />
+    <Compile Include="Web\WebHelper.cs" />
+    <Compile Include="XML\XMLFormatter.cs" />
+    <Compile Include="XML\XmlHelper.cs" />
+    <Compile Include="XML\XslHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
